@@ -5,20 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="nav.js" defer></script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>
+    <header>
+        <div class="flex primary-header ">
+            <div class="logo">
                 <a href="https://www.bmu.edu.in/">
-                    <img src="" alt="">
+                    <img src="./BMLImage.png" alt="BMLImage.png">
                 </a>
-            </li>
-            <li>
-                <a href="index.html"></a>
-            </li>
-
-        </ul>
-    </nav>
+                <a href="index.html">
+                    Library</a>
+            </div>
+            <button class="mobile-nav-toggle sr-only" aria-controls="primary-navigation" aria-expanded="false">
+            </button>
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="navbar primary-navigation flex">
+                    <li>
+                        <a href="">
+                            Contact us</a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Chat with us</a>
+                    </li>
+                    <li>
+                        <a href="./signIn.html">
+                            Sign In</a>
+                    </li>
+    
+                </ul>
+            </nav>
+        </div>
+    
+        <nav>
+            <ul class="navbar secondary-navigation flex">
+                <li>
+                    <a href="">Resources</a>
+                </li>
+                <li>
+                    <a href="">Services</a>
+                </li>
+                <li>
+                    <a href="">Events</a>
+                </li>
+                <li>
+                    <a href="">University Repos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 </body>
 </html>

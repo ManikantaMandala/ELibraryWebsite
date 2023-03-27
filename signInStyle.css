@@ -18,7 +18,6 @@ body{
 }
 form p{
     font-size: small;
-    color: #46469e;
 }
 .center h1{
     text-align: center;
@@ -42,7 +41,7 @@ form .txt_field{
     width: 100%;
     padding: 0 5px;
     height: 40px;
-    font-size: 15px;
+    font-size: medium;
     border: none;
     background: none;
     outline: none;
@@ -53,7 +52,7 @@ form .txt_field{
     left: 5px;
     color: #adadad;
     transform: translateY(-50%);
-    font-size:15px;
+    font-size: medium;
     pointer-events:none;
     transition: .5s;
 }
@@ -93,7 +92,7 @@ input[type="submit"]{
     width:100%;
     height: 50px;
     background:#46469e;
-    font-size: 18px;
+    font-size: medium;
     color: white;
     cursor: pointer;
     outline: none;
