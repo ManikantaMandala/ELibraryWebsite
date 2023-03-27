@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signInStyle.css">
+    <title>signIn</title>
+</head>
+<body>
+    <div class="center"> 
+        <h1>
+            Sign In
+        </h1>
+        <form method="post"> 
+            <div class="txt_field">
+                <input pattern="[0-9]{6}" title="It's 6 digit number dude!"required>
+                <span></span>
+                <label>Enrollment No.</label>
+            </div> 
+            <div class="txt_field">
+                <input type="password" required>
+                <span></span>
+                <label>Password</label>
+            </div> 
+            <p>Default password: 1234</p>
+            <div class="pass">
+                <a href = "./forgotPassword.html"> Forgot Password?</a>
+            </div>
+            <input type="submit" value="Sign in">
+        </form>
+    </div>
+</body>
+</html>
