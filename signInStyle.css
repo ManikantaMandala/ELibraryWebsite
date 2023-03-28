@@ -1,104 +1,197 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: white;
-    height:100vh;
-    overflow: hidden;
-}
-.center{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    width:400px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 3px 3px 3px gray;
-}
-form p{
-    font-size: small;
-}
-.center h1{
-    text-align: center;
-    background: #46469e;
-    color:white;
-    margin: 0;
-    padding: 5%;
-    border-radius: 10px 10px 0 0;
-}
-.center form{
-    margin: 30px auto;
-    width:70%;
-    text-align: center;
-}
-form .txt_field{
-    position:relative;
-    border-bottom: 2px solid #adadad;
-    margin: 30px 0;
-}
-.txt_field input{
-    width: 100%;
-    padding: 0 5px;
-    height: 40px;
-    font-size: medium;
-    border: none;
-    background: none;
-    outline: none;
-}
-.txt_field label{
-    position:absolute;
-    top: 50%;
-    left: 5px;
-    color: #adadad;
-    transform: translateY(-50%);
-    font-size: medium;
-    pointer-events:none;
-    transition: .5s;
-}
-.txt_field span::before{
-    content: '';
-    position: absolute;
-    top: 40px;
-    left:0;
-    width: 0%;
-    height: 2px;
-    background: #46469e;
-    transition: .5s;
-}
-.txt_field input:focus ~ label,
-.txt_field input:valid ~label{
-    top: -5px;
-    color: #46469e;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.txt_field input:focus ~ span::before,
-.txt_field input:valid ~ span::before{
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    background: #eaeff4;
+}
+
+.wrapper {
+    margin: 0 auto;
     width: 100%;
+    max-width: 1140px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-.pass{
-    margin:-5px 0 20px 5px;
-    color: gray;
-    cursor: pinter;
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
 }
-.pass:hover{
-    text-decoration: underline;
+
+.credit {
+    position: relative;
+    margin: 25px auto 0 auto;
+    width: 100%;
+    text-align: center;
+    color: #666666;
+    font-size: 16px;
+    font-weight: 400;
 }
-.pass a{
+
+.credit a {
+    color: #222222;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* * * * * Login Form CSS * * * * */
+h2 {
+    margin: 0 0 15px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+h2 img {
+    width: 120px;
+}
+
+p {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.logo img {
+    width: 4rem;
+    aspect-ratio: 1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 7px 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
     text-decoration: none;
-    color: gray;
-}
-input[type="submit"]{
-    width:100%;
-    height: 50px;
-    background:#46469e;
-    font-size: medium;
-    color: white;
-    cursor: pointer;
+    border-radius: 5px;
+    color: #ffffff;
     outline: none;
-    border: none;
-    border-radius: 3px;
+    border: 1px solid #ffffff;
+    transition: .3s;
+    -webkit-transition: .3s;
 }
-input[type="submit"]:hover{
-    border-color: #2691d9;
+
+.btn:hover {
+    color: hsla(189, 51%, 39%, 0.8);
+    background: #ffffff;
+}
+
+.col-left,
+.col-right {
+    width: 55%;
+    padding: 45px 35px;
+    display: flex;
+}
+
+.col-left {
+    width: 45%;
+    background: hsla(189, 51%, 39%, 0.8);
+    -webkit-clip-path: polygon(98% 17%, 100% 34%, 98% 51%, 100% 68%, 98% 84%, 100% 100%, 0 100%, 0 0, 100% 0);
+    clip-path: polygon(98% 17%, 100% 34%, 98% 51%, 100% 68%, 98% 84%, 100% 100%, 0 100%, 0 0, 100% 0);
+}
+
+@media(max-width: 575.98px) {
+    .container {
+        flex-direction: column;
+        box-shadow: none;
+    }
+
+    .col-left,
+    .col-right {
+        width: 100%;
+        margin: 0;
+        padding: 30px;
+        -webkit-clip-path: none;
+        clip-path: none;
+    }
+}
+
+.login-text {
+    position: relative;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+}
+
+.login-form {
+    position: relative;
+    width: 100%;
+    color: #666666;
+}
+
+.login-form p:last-child {
+    margin: 0;
+}
+
+.login-form p a {
+    color: hsla(189, 51%, 39%, 0.8);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.login-form p:last-child a:last-child {
+    float: right;
+}
+
+.login-form label {
+    display: block;
+    width: 100%;
+    margin-bottom: 2px;
+    letter-spacing: .5px;
+}
+
+.login-form p:last-child label {
+    width: 60%;
+    float: left;
+}
+
+.login-form label span {
+    color: #ff574e;
+    padding-left: 2px;
+}
+
+.login-form input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    outline: none;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.login-form input:focus {
+    border-color: #ff574e;
+}
+
+.login-form input.btn {
+    color: #ffffff;
+    background: hsla(189, 51%, 39%, 0.8);
+    border-color: hsla(189, 51%, 39%, 0.8);
+    outline: none;
+    cursor: pointer;
+}
+
+.login-form input.btn:hover {
+    color: #4CAF50;
+    background: #ffffff;
 }

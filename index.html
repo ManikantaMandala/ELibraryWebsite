@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,10 @@
     <link rel="stylesheet" href="style.css">
     <script src="nav.js" defer></script>
 </head>
+
 <body>
     <header>
-        <div class="flex primary-header ">
+        <div class="primary-header ">
             <div class="logo">
                 <a href="https://www.bmu.edu.in/">
                     <img src="./BMLImage.png" alt="BMLImage.png">
@@ -20,8 +22,26 @@
             </div>
             <button class="mobile-nav-toggle sr-only" aria-controls="primary-navigation" aria-expanded="false">
             </button>
+        </div>
+        <div class="navbar" data-visible="false">
             <nav>
-                <ul id="primary-navigation" data-visible="false" class="navbar primary-navigation flex">
+                <ul class="primary-navigation flex">
+                    <li>
+                        <a href="">Resources</a>
+                    </li>
+                    <li>
+                        <a href="">Services</a>
+                    </li>
+                    <li>
+                        <a href="">Events</a>
+                    </li>
+                    <li>
+                        <a href="">University Repos</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav>
+                <ul id="secondary-navigation" class="secondary-navigation flex">
                     <li>
                         <a href="">
                             Contact us</a>
@@ -34,27 +54,11 @@
                         <a href="./signIn.html">
                             Sign In</a>
                     </li>
-    
+
                 </ul>
             </nav>
         </div>
-    
-        <nav>
-            <ul class="navbar secondary-navigation flex">
-                <li>
-                    <a href="">Resources</a>
-                </li>
-                <li>
-                    <a href="">Services</a>
-                </li>
-                <li>
-                    <a href="">Events</a>
-                </li>
-                <li>
-                    <a href="">University Repos</a>
-                </li>
-            </ul>
-        </nav>
     </header>
 </body>
+
 </html>
