@@ -12,3 +12,16 @@ navToggle.addEventListener('click', () => {
         navToggle.setAttribute('aria-expanded', false);
     }
 })
+
+const searchBar = document.querySelector(".wrap")
+const searchIcon = document.querySelector(".search-bar")
+
+searchIcon.addEventListener('click',() =>{
+    const searchVisibility = searchBar.getAttribute('search-control')
+    if(searchVisibility==="false"){
+        searchBar.setAttribute('search-control', true);
+    }
+    else{
+        searchBar.setAttribute('search-control',false);
+    }
+})

@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     font-size: 16px;
     font-weight: 400;
     color: #666666;
@@ -63,7 +63,7 @@ h2 img {
 }
 
 p {
-    margin: 0 0 20px 0;
+    /* margin: 0 0 20px 0; */
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
@@ -163,7 +163,7 @@ p {
 }
 
 .login-form label span {
-    color: #ff574e;
+    color: hsla(189, 51%, 39%, 0.8);
     padding-left: 2px;
 }
 
@@ -180,7 +180,7 @@ p {
 }
 
 .login-form input:focus {
-    border-color: #ff574e;
+    border-color: hsla(189, 51%, 39%, 0.8);
 }
 
 .login-form input.btn {
@@ -192,6 +192,6 @@ p {
 }
 
 .login-form input.btn:hover {
-    color: #4CAF50;
+    color: hsla(189, 51%, 39%, 0.8);
     background: #ffffff;
 }
