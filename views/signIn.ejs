@@ -8,7 +8,7 @@
     <title>Login Pages</title>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./signInStyle.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/signInStyle.css">
 </head>
 
 <body>
@@ -16,14 +16,14 @@
         <div class="container">
             <div class="col-left">
                 <div class="login-text">
-                    <a href="./index.html " class="logo">
-                        <img src="BMLImage.png" alt="BMLImage">
+                    <a href="/" class="logo">
+                        <img src="/public/images/BMLImage.png" alt="BMLImage">
                     </a>
                     <p>
                         The default credentials to sign in are enrollment no. (6 digit) and password is 1234. For more
                         information contact us
                     </p>
-                    <a class="btn" href="./index.html">Back</a>
+                    <a class="btn" href="/">Back</a>
                 </div>
             </div>
             <div class="col-right">
@@ -31,7 +31,7 @@
                     <h2>Sign in</h2>
                     <form>
                         <p>
-                            <input type="text" placeholder="Enrollment No." required>
+                            <input type="number" pattern="([0-9]){6}" placeholder="Enrollment No." required>
                         </p>
                         <p>
                             <input type="password" placeholder="Password" required>
@@ -40,7 +40,7 @@
                             <input class="btn" type="submit" value="Sign in" />
                         </p>
                         <p>
-                            <a href="./forgotPassword.html">Forgot password?</a>
+                            <a href="forgotPassword">Forgot password?</a>
                         </p>
                     </form>
                 </div>
