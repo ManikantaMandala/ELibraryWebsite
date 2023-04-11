@@ -1,0 +1,61 @@
+<header>
+    <div class="primary-header ">
+        <div class="logo">
+            <a href="https://www.bmu.edu.in/">
+                <img src="/public/images/BMLImage.png" alt="BMLImage.png">
+            </a>
+            <a href="/">
+                Library</a>
+        </div>
+        <button class="mobile-nav-toggle sr-only" aria-controls="primary-navigation" aria-expanded="false">
+        </button>
+    </div>
+    <div class="search-bar">
+        <img class="search-icon" src="/public/images/search.svg" alt="search">
+    </div>
+    <div class="navbar" data-visible="false">
+        <nav>
+            <ul class="primary-navigation flex">
+                <li>
+                    <a href="/resources">Resources</a>
+                </li>
+                <li>
+                    <a href="/services">Services</a>
+                </li>
+                <li>
+                    <a href="/events">Events</a>
+                </li>
+                <li>
+                    <a href="/UniversityRepos">University Repos</a>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul id="secondary-navigation" class="secondary-navigation flex">
+                <li>
+                    <a href="">
+                        Contact us</a>
+                </li>
+                <li>
+                    <a href="">
+                        Chat with us</a>
+                </li>
+                <li>
+                    <a href="./signIn">
+                        Sign In</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="wrap" search-control="false">
+        <div class="searchDiv">
+            <form action="/search/title" class="search" method="get">
+                <input type="text" class="searchTerm" placeholder="Search" name="key">
+                <input type="submit" class="searchButton">
+            </form>
+        </div>
+    </div>
+</header>

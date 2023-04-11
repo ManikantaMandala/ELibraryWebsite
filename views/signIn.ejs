@@ -29,12 +29,12 @@
             <div class="col-right">
                 <div class="login-form">
                     <h2>Sign in</h2>
-                    <form>
+                    <form method="post" action="/signIn">
                         <p>
-                            <input type="number" pattern="([0-9]){6}" placeholder="Enrollment No." required>
+                            <input type="number" pattern="([0-9]){6}" placeholder="Enrollment No." name="enrollmentNo"required>
                         </p>
                         <p>
-                            <input type="password" placeholder="Password" required>
+                            <input type="password" placeholder="Password" name="password" required>
                         </p>
                         <p>
                             <input class="btn" type="submit" value="Sign in" />

@@ -17,10 +17,9 @@ const bookSchema = new mongoose.Schema({
     ddc: {
         type:SchemaTypes.Decimal128,
         required: true,
-        
     },
     rating: SchemaTypes.Decimal128,
     Subject: [{type: String}]
 })
 
-module.exports = mongoose.Schema("Books",bookSchema)
+module.exports = mongoose.model("Books",bookSchema)

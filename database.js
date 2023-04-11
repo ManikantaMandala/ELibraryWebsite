@@ -1,40 +1,45 @@
-const { MongoClient } = require('mongodb');
+//imports
+require('dotenv').config()
 const express = require('express');
 const app = express();
-const {readFile} = require('fs').promises;
-const path = require('path')
+const path = require('path');
 
-const url = 'mongodb://localhost:27017';
-const client = new MongoClient(url);
+//Database constants
+const dbConnection = require('./routes/connection')
+dbConnection();
 
-const dbName = 'LibraryDatabase';
-
-// async function getData() {
-//     let results = await client.connect();
-//     console.log('Connected successfully to server');
-//     let db = results.db(dbName);
-//     let collection = db.collection('Books');
-//     let res = await collection.find({}).toArray();
-//     console.log(res)
-// }
-
-// getData();
-
-app.listen(8000, ()=>{
-    console.log("Server started on port 8000");
+//server
+const port = 8000;
+app.listen(port, async()=>{
+    console.log(`Server started on port ${port}`);
 });
 
-
+//view engine initialization
 app.use(express.static(path.join(__dirname)));
+app.use(express.json())
+app.use(express.urlencoded({extended: true}));
 app.set('views', path.join(__dirname,'views'));
 app.set("view engine", "ejs");
 
-app.get('/', (req,res)=>{
-    res.render('./index.ejs');
-})
-app.get('/signIn', (req,res)=>{
-    res.render('./signIn.ejs');
-})
-app.get('/forgotPassword', (req,res)=>{
-    res.render('./forgotPassword.ejs');
-})
+//routes
+const indexRouter = require('./routes/index.js');
+const signInRouter = require('./routes/signIn.js');
+const forgotPasswordRouter = require('./routes/forgotPassword.js');
+const getBooksRouter = require('./routes/getBooks');
+const searchRouter = require('./routes/search');
+const resourcesRouter = require('./routes/resources');
+const servicesRouter = require('./routes/services');
+const eventsRouter = require('./routes/events');
+const universityRepoRouter = require('./routes/universityRepo');
+
+app.get('/', indexRouter);
+app.get('/signIn', signInRouter);
+app.post('/signIn', signInRouter);
+app.get('/forgotPassword', forgotPasswordRouter);
+app.post('/forgotPassword', forgotPasswordRouter);
+app.get('/getBooks', getBooksRouter);
+app.get('/search/title', searchRouter);
+app.get('/resources', resourcesRouter);
+app.get('/services', servicesRouter);
+app.get('/events', eventsRouter);
+app.get('/universityRepos', universityRepoRouter);
