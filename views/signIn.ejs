@@ -31,13 +31,13 @@
                     <h2>Sign in</h2>
                     <form method="post" action="/signIn">
                         <p>
-                            <input type="number" pattern="([0-9]){6}" placeholder="Enrollment No." name="enrollmentNo"required>
+                            <input id="enrollmentNo" type="number" placeholder="Enrollment No." name="enrollmentNo"required>
                         </p>
                         <p>
                             <input type="password" placeholder="Password" name="password" required>
                         </p>
                         <p>
-                            <input class="btn" type="submit" value="Sign in" />
+                            <input class="btn" type="submit" value="Sign in" id="submitButton" onclick="return isVaild()" />
                         </p>
                         <p>
                             <a href="forgotPassword">Forgot password?</a>
@@ -47,6 +47,19 @@
             </div>
         </div>
     </div>
+    <script>
+        const pattern = /^[0-9]{6}$/;
+        const enrollment = document.getElementById('enrollmentNo');
+        const buttonSubmit = document.getElementById('submitButton');
+        
+        function isVaild(){
+            if(pattern.test(enrollment.value)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -8,10 +8,11 @@ router.get('/search/title', async (req,res)=>{
         const book = await books.find({
                 "$or":[
                     {title:{$regex:key}},
+                    {Subject:{$regex:key}}
                 ]
         });
-        console.log(book);
-        res.send("This is search results "+ book);
+        // console.log(book);
+        res.render('searchResults',{data : book});
     } catch (error) {
         res.status(500).json({message: error.message});
     }

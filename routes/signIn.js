@@ -12,7 +12,7 @@ router.post('/signIn', (req, res) => {
         const password = req.body.password;
         console.log(`Here are the credentials:\n enrollmentNo: ${enrollmentNo} \n password: ${password}`);
         //await function: for checking the credential match with the database
-        res.render('index.ejs');
+        res.redirect('/');
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
