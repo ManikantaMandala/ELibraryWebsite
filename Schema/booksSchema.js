@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const SchemaTypes = mongoose.Schema.Types;
 const bookSchema = new mongoose.Schema({
     ISBN:{
-        type: Number,
+        type: String,
         required: true,
         unique: true,
     },
@@ -13,13 +13,14 @@ const bookSchema = new mongoose.Schema({
     author: [{type: String}],
     contributor: [{type: String}],
     publication:String,
-    edition:Number,
+    edition:String,
     ddc: {
-        type:SchemaTypes.Decimal128,
+        type:String,
         required: true,
     },
     rating: SchemaTypes.Decimal128,
-    Subject: [{type: String}]
+    Subject: [{type: String}],
+    issueQueue: []
 })
 
 module.exports = mongoose.model("Books",bookSchema)

@@ -205,7 +205,7 @@ a:visited {
 
 .searchTerm {
     width: 100%;
-    border: 3px solid hsla(189, 51%, 39%, 0.8);
+    border: 3px solid #318796cc;
     border-right: none;
     padding: 5px;
     height: 20px;

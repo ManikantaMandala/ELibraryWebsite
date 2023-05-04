@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Borrow Table</title>
+    <link rel="stylesheet" type="text/css" href="/css/tables.css">
+</head>
+<body>
+    <%- include('./partials/navbar'); -%>
+<h1>Borrow Data</h1>
+<form action="tables/send" method="POST" name="sample">
+<br>
+    Roll No. <input type="number" name="rollno" min="0"> 
+    Name: <input type="text" name="name">
+    Book code. <input type="text" name="bookcode">
+    <button type="submit">Add Data</button>
+    <br><br>
+</form>
+
+<table id="tbl" class="table" border="1">
+    <thead>
+    <th>Rollno</th> 
+    <th>Name</th>
+    <th>Bookcode</th>
+    <th> Delete</th>
+    <th>Update</th>
+    <th>Timestamp</th>
+    </thead>
+      <tbody> 
+        <% data.forEach(function(item){ %>
+            <tr>
+                <td> <%= item.rollno%> </td>
+                <td><%= item.name %></td>
+                <td><%= item.bookcode %></td>
+                <td>
+                    <form action="tables/delete/<%= item._id%>" method="post">
+                        <button type="submit">Delete</button></td>
+                    </form>
+                <td>
+                    <form action="tables/update/<%= item._id%>" method="post">
+                        <button type="submit">Update</button></td>
+                    </form>
+                </td>
+                <td><%= item.updatedAt %></td>
+            </tr>
+          <% }); %>     
+     </tbody>
+ </table>
+<!-- <script src="tables.js"></script> -->
+</body>
+</html>
+
+

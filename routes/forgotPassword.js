@@ -11,7 +11,7 @@ router.post('/forgotPassword',(req,res)=>{
         const key=req.body.emailId;
         console.log("We got the emailId: "+ key);
         //await function: for sending the changing link for emailId
-        res.render('index.ejs');
+        res.redirect('/');
     } catch (error) {
         res.status(500).json({message: error.message});
     }

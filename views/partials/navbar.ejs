@@ -28,6 +28,9 @@
                 <li>
                     <a href="/UniversityRepos">University Repos</a>
                 </li>
+                <li>
+                    <a href="/tables">Tables</a>
+                </li>
             </ul>
         </nav>
         <nav>
@@ -41,7 +44,7 @@
                         Chat with us</a>
                 </li>
                 <li>
-                    <a href="./signIn">
+                    <a href="/signIn">
                         Sign In</a>
                 </li>
 
@@ -53,6 +56,14 @@
     <div class="wrap" search-control="false">
         <div class="searchDiv">
             <form action="/search/title" class="search" method="get">
+                <select name="dropdown" id="dropdown">
+                    <option value="all">Library catalog</option>
+                    <option value="title">Title</option>
+                    <option value="author">Author</option>
+                    <option value="subject">subject</option>
+                    <option value="ddc">Call number</option>
+                    <option value="isbn">ISBN</option>
+                </select>
                 <input type="text" class="searchTerm" placeholder="Search" name="key">
                 <input type="submit" class="searchButton">
             </form>
