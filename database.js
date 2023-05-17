@@ -44,7 +44,7 @@ app.get('/getBooks', getBooksRouter);
 app.get('/search/title', searchRouter);
 app.get('/resources', resourcesRouter);
 app.get('/services', servicesRouter);
-app.get('/events', eventsRouter);
+app.get('/virtual_tour', eventsRouter);
 app.get('/universityRepos', universityRepoRouter);
 app.get('/tables', tableRouter)
 app.post('/tables/delete/:id', tableRouter)

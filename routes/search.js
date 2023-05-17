@@ -6,7 +6,6 @@ router.get('/search/title', async (req,res)=>{
     try {
         const key = req.query.key;
         const dropdown = req.query.dropdown;
-        console.log(dropdown)
         var book;
         if(dropdown === "all"){
             book = await books.find({
@@ -14,6 +13,7 @@ router.get('/search/title', async (req,res)=>{
                         {title:{$regex:key}},
                         {author:{$regex:key}},
                         {Subject:{$regex:key}},
+                        {subject:{$regex:key}},
                         {ISBN:{$regex:key}},
                         {isbn:{$regex:key}},
                         {ddc:{$regex:key}},
@@ -38,6 +38,7 @@ router.get('/search/title', async (req,res)=>{
         if(dropdown === "subject"){
             book = await books.find({
                     "$or":[
+                        {subject:{$regex:key}},
                         {Subject:{$regex:key}}
                     ]
             });

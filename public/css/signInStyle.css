@@ -10,7 +10,9 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: #666666;
-    background: #eaeff4;
+    background: url("../images/bmlMunjalMainBuilding.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
 
 .wrapper {

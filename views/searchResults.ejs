@@ -14,10 +14,11 @@
 </head>
 <body>
         <%- include('./partials/navbar'); -%>
+
         <div class="container">
-            <% data.forEach(function(item){ %>
-            <%- include('partials/cards', {item: item}); %>
-            <% }); %>
+            <% for (let i = 0; i < data.length && i < 3; i++) { %>
+              <%- include('partials/cards', {item: data[i]}); %>
+            <% } %>
         </div>
 </body>
 </html>

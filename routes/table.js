@@ -11,11 +11,6 @@ router.post('/tables/delete/:id',async (req,res)=>{
     const data = await entries.findOneAndDelete({_id : id});
     // res.redirect('/');
 })
-router.post('/tables/update/:id',async (req,res)=>{
-    const {id} = req.params;
-    
-    // res.redirect('/');
-})
 
 router.post('/tables/send',async (req,res)=>{
     const data = req.body;

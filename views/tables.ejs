@@ -22,7 +22,6 @@
     <th>Name</th>
     <th>Bookcode</th>
     <th> Delete</th>
-    <th>Update</th>
     <th>Timestamp</th>
     </thead>
       <tbody> 
@@ -35,11 +34,6 @@
                     <form action="tables/delete/<%= item._id%>" method="post">
                         <button type="submit">Delete</button></td>
                     </form>
-                <td>
-                    <form action="tables/update/<%= item._id%>" method="post">
-                        <button type="submit">Update</button></td>
-                    </form>
-                </td>
                 <td><%= item.updatedAt %></td>
             </tr>
           <% }); %>     
